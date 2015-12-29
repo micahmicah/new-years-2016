@@ -1,0 +1,120 @@
+.header{
+	font-family:avenir, helvetica, sans-serif;
+	font-style:italic;
+	text-transform:uppercase;
+	text-rendering:optimizeLegibility;
+	position:relative;
+	height:100vh;
+	font-size:36px;
+	// background:rgba(255,255,255,0.2);
+
+	span{
+		padding:0.025em 0.25em;
+		display: inline-block;
+		position:absolute;
+		// mix-blend-mode:multiply;
+	}
+
+	@media screen and (min-width:768px) {
+		font-size:63px;
+		
+		
+		width:9em;
+		margin:-1em auto 0 auto;
+
+		span{
+			padding:0.025em 0.25em;
+		}
+	}
+}
+
+.dark{
+	background:black;
+	color:white;
+	
+
+	// border:0.125em solid white;
+}
+
+.light{
+	background:white;
+	color:black;
+	// border:0.125em solid black;
+}
+
+#new{
+	@include transform(rotate(20deg));
+	margin-left:0.25em;
+	@include animation-name(one);
+	@include animation-duration(12s);
+	@include animation-timing-function(ease-in-out);
+	@include animation-iteration-count(infinite);
+}
+
+#years{
+	@include transform(rotate(-10deg));
+	// margin-bottom:-2em;
+	top:1.25em;
+	@include animation-name(two);
+	@include animation-duration(12s);
+	@include animation-timing-function(ease-in-out);
+	@include animation-iteration-count(infinite);
+}
+
+#eve{
+	@include transform(rotate(5deg));
+	top:2.25em;
+	left:2.5em;
+	@media screen and (min-width:768px) {
+		right:-0.5em;
+	}
+
+	@include animation-name(three);
+	@include animation-duration(12s);
+	@include animation-timing-function(ease-in-out);
+	@include animation-iteration-count(infinite);
+}
+
+#party{
+	@include transform(rotate(12deg));
+	// margin-top:-5.5em;
+	top:3.25em;
+	left:0.75em;
+
+	@include animation-name(four);
+	@include animation-duration(12s);
+	@include animation-timing-function(ease-in-out);
+	@include animation-iteration-count(infinite);
+}
+
+.deets{
+	font-family:avenir, helvetica, arial, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+	background:black;
+	color:white;
+	width:12em;
+	margin:0 auto 20em auto;
+	padding:1em;
+	box-sizing:border-box;
+	font-size:18px;
+	letter-spacing:0.125em;
+	@include animation-name(two);
+	@include animation-duration(12s);
+	@include animation-timing-function(ease);
+	@include animation-iteration-count(infinite);
+
+	@media screen and (min-width:768px) {
+		font-size:28px;
+	}
+
+	p{
+		margin-bottom:0;
+		margin-top:0;
+
+	}
+
+	.time{
+		text-align:right;
+	}
+}

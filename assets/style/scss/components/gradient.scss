@@ -1,13 +1,166 @@
-@include keyframes(drake){
-	from{
-		// background:red;
-		@include linear-gradient(to top, #8fdce5, #3dc3d1);
+$yellow-light: #FFF010;
+$yellow-dark: #F5A117;
+
+$green-dark:#2AC507;
+$green-light:#11FA4D;
+
+$blue-dark:#126FFF;
+$blue-light:#00DAFE;
+
+$purple-dark:#B8009A;
+$purple-light:#FD0CFF;
+
+$cyan-dark:#02C0E0;
+$cyan-light:#10F3FF;
+
+
+@include keyframes(lightToDark){
+	0%{
+		background:white;
+		color:black;
 	}
-	to{
-		// background:white;
-		@include linear-gradient(to top, #3dc3d1, #8fdce5);
+	50%{
+		background:black;
+		color:white;
+	}
+
+	100%{
+		background:white;
+		color:black;
 	}
 }
+
+
+@include keyframes(darkToLight){
+	0%{
+		background:black;
+		color:white;
+	}
+	50%{
+		background:white;
+		color:black;
+	}
+
+	100%{
+		background:black;
+		color:white;
+	}
+}
+
+@include keyframes(one){
+	0%{
+		background:$purple-dark;
+		color:$purple-light;
+	}
+
+	25%{
+		background:$blue-dark;
+		color:$blue-light;
+	}
+
+	50%{
+		background:$green-dark;
+		color:$green-light;
+	}
+
+	75%{
+		background:$cyan-light;
+		color:$cyan-dark;
+	}
+
+	100%{
+		background:$purple-dark;
+		color:$purple-light;
+	}
+}
+
+@include keyframes(two){
+	0%{
+		background:$blue-dark;
+		color:$blue-light;
+		
+	}
+
+	25%{
+		background:$purple-dark;
+		color:$purple-light;
+	}
+
+	50%{
+		background:$cyan-light;
+		color:$cyan-dark;
+	}
+
+	75%{
+		background:$green-dark;
+		color:$green-light;
+	}
+
+	100%{
+		background:$blue-dark;
+		color:$blue-light;
+	}
+}
+
+@include keyframes(three){
+	0%{
+		background:$green-dark;
+		color:$green-light;
+		
+	}
+
+	25%{
+		background:$cyan-light;
+		color:$cyan-dark;
+		
+	}
+
+	50%{
+		background:$blue-dark;
+		color:$blue-light;
+	}
+
+	75%{
+		background:$purple-dark;
+		color:$purple-light;
+	}
+
+	100%{
+		background:$green-dark;
+		color:$green-light;
+	}
+}
+
+@include keyframes(four){
+	0%{
+		background:$cyan-light;
+		color:$cyan-dark;
+	}
+
+	25%{
+		background:$green-dark;
+		color:$green-light;
+	}
+
+	50%{
+		background:$purple-dark;
+		color:$purple-light;
+	}
+
+	75%{
+		background:$blue-dark;
+		color:$blue-light;
+	}
+
+	100%{
+		background:$cyan-light;
+		color:$cyan-dark;
+		
+	}
+}
+
+
+
 
 .gradient{
 	// @include radial-gradient(circle at 50% 50%, #eee 10%, #1e5799 30%, #efefef);
@@ -22,6 +175,16 @@
 body{
 	width:100%;
 	height:100%;
+}
+
+
+.drizzay{
+	background:url('../../img/drizzay.gif');
+	background-size:300%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:40% 50%; 
+
 }
 
 
